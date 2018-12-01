@@ -1,6 +1,13 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
+const cssLoader = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: true,
+  },
+};
+
 module.exports = {
   entry: [
     './src/index',
@@ -12,7 +19,21 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
+        },
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader',
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
       },
       {
         test: /\.html$/,
