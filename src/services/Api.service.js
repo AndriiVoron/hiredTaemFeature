@@ -1,7 +1,5 @@
 import axios from 'axios';
 import Errors from '../models/ErrorModels';
-  // BadConnectionError,
-  // InvalidDataError,
 import UserModel from '../models/User';
 
 class ApiService {

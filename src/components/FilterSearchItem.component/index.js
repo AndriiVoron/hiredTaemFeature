@@ -1,26 +1,17 @@
 import { Component } from 'react';
 
-class AppComponent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      searchTerm: '',
-    };
-  }
-
+class FilterSearchItemComponent extends Component {
   changeInput = (e) => {
-    this.setState({
-      searchTerm: e.target.value,
-    });
+    this.props.onChange(e.target.value);
   }
 
   render() {
     return (
       <div>
         <label>Name: </label>
-        <input placeholder="search..." value={this.state.searchTerm} onChange={this.changeInput}></input>
+        <input placeholder="search..." value={this.props.value} onChange={this.changeInput}></input>
       </div>
     );
   }
 }
-export default AppComponent;
+export default FilterSearchItemComponent;

@@ -1,24 +1,15 @@
 import { Component } from 'react';
 
-class AppComponent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      filterValue: '',
-    };
-  }
-
+class FilterSelectComponent extends Component {
   changeSelect = (e) => {
-    this.setState({
-      filterValue: e.target.value,
-    });
+    this.props.onChange(e.target.value);
   }
 
   render() {
     return (
       <div>
         <label>City: </label>
-        <select value={this.state.filterValue} onChange={this.changeSelect}>
+        <select value={this.props.value} onChange={this.changeSelect}>
           <option value='' disabled hidden>Please choose city</option>
           {this.props.options.map((city) => {
             return (<option value={city.name} key={city.index}>{city.name}</option>);
@@ -28,4 +19,4 @@ class AppComponent extends Component {
     );
   }
 }
-export default AppComponent;
+export default FilterSelectComponent;

@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import styles from './style.css';
 
-class AppComponent extends Component {
+class UserCardComponent extends Component {
   render() {
     const { user, toLeft, toRight } = this.props;
     return (
@@ -31,4 +31,4 @@ class AppComponent extends Component {
     );
   }
 }
-export default AppComponent;
+export default UserCardComponent;

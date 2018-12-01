@@ -3,7 +3,7 @@ import UserCart from '../UserCart.component';
 
 import styles from './style.css';
 
-class AppComponent extends Component {
+class TableColumnComponent extends Component {
   render() {
     return (
       <div className={ styles.tableColumn }>
@@ -15,4 +15,4 @@ class AppComponent extends Component {
     );
   }
 }
-export default AppComponent;
+export default TableColumnComponent;

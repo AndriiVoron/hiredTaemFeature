@@ -4,36 +4,24 @@ import FilterSelectItem from '../FilterSelect.component';
 
 import styles from './style.css';
 
-class AppComponent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      cities: [],
-      name: '',
-    };
-  }
-
+class FilterComponent extends Component {
   onChangeFilters = (filterName) => {
     return (data) => {
-      this.setState({
+      this.props.onChangeFilter({
         [filterName]: data,
-      }, () => {
-        const { cities, name } = this.state;
-        this.props.onChangeFilter({
-          cities,
-          name,
-        });
       });
     };
   }
 
   render() {
+    const { city, name } = this.props.values;
+    const citiesOption = this.props.options.cities;
     return (
       <div className={ styles.filterBlock }>
-        <FilterSearchItem onChange={this.onChangeFilters('name')}></FilterSearchItem>
-        <FilterSelectItem onChange={this.onChangeFilters('cities')} options={this.props.options.cities}></FilterSelectItem>
+        <FilterSearchItem onChange={this.onChangeFilters('name')} value={name}></FilterSearchItem>
+        <FilterSelectItem onChange={this.onChangeFilters('city')} value={city} options={citiesOption}></FilterSelectItem>
       </div>
     );
   }
 }
-export default AppComponent;
+export default FilterComponent;
