@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ApiService from '../../services/Api.service';
 
 class AppComponent extends Component {
   constructor() {
@@ -6,6 +7,10 @@ class AppComponent extends Component {
     this.state = {
       test: 'Hello World!!!',
     };
+
+    ApiService.getUsers().then((test) => {
+      console.log('test', test);
+    });
   }
 
   render() {
