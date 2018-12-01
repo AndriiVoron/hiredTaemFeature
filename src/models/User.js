@@ -8,6 +8,7 @@ export default class User extends BaseModel {
     this.city = data.location.city;
     this.name = `${title} ${first} ${last}`;
     this.id = data.login.uuid;
+    this.avatar = data.picture;
   }
 
   contractData() {
@@ -15,6 +16,7 @@ export default class User extends BaseModel {
       'login',
       'name',
       'location',
+      'picture',
     ];
   }
 }

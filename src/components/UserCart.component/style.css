@@ -1,0 +1,67 @@
+:local(.userCart){
+    border: 1px solid grey;
+    box-shadow: 2px 2px 3px 3px lightskyblue;
+    border-radius:5px;
+    width: 250px; /* 90%;  */
+    padding: 10px 15px;
+    transition: all .4s ease;
+}
+:local(.userCart:hover){
+    background-color: lightskyblue;
+}
+
+:local(.userCartData){
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+:local(.userCartAva){
+    border-radius:50%;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+}
+
+:local(.userCartAva img){
+    width: 100%;
+}
+
+:local(.userCardDataName){
+    padding: 0 15px;
+}
+
+:local(.userCartControl){
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+:local(.goArrow){
+    overflow: hidden;
+    width: 0; 
+    height: 0; 
+    cursor: pointer;
+    text-indent: 9000px;
+    padding: 0 15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transition: all .4s linear;
+}
+
+:local(.goLeft){
+  border-right:10px solid grey;
+}
+:local(.goLeft:hover){
+    border-right:10px solid red;
+}
+
+:local(.goRight){
+  border-left:10px solid grey;
+}
+:local(.goRight:hover){
+    border-left:10px solid red;
+}
