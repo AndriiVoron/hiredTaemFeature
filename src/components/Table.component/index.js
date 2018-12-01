@@ -5,6 +5,8 @@ import TableColumn from '../TableColumn.component';
 import { APPEND, INTERVIEW, HIRED } from '../../Constants/direction';
 import City from '../../models/City';
 
+import styles from './style.css';
+
 class AppComponent extends Component {
   constructor() {
     super();
@@ -57,7 +59,6 @@ class AppComponent extends Component {
 
     cities = Array.from(new Set(cities));
     cities = cities.map((city, index) => new City(city, index));
-    
     return cities;
   }
 
@@ -69,7 +70,7 @@ class AppComponent extends Component {
     return (
       <div>
         <FilterComponent onChangeFilter={this.changeFilter} options={this.state.filterOptions}></FilterComponent>
-        <div>
+        <div className={ styles.table }>
           <TableColumn title="Append" userList={this.state[APPEND]} toRight={this.moveUser(INTERVIEW, APPEND)}></TableColumn>
           <TableColumn title="Interviewing" userList={this.state[INTERVIEW]} toLeft={this.moveUser(APPEND, INTERVIEW)} toRight={this.moveUser(HIRED, INTERVIEW)}></TableColumn>
           <TableColumn title="Hired" userList={this.state[HIRED]} toLeft={this.moveUser(INTERVIEW, HIRED)}></TableColumn>

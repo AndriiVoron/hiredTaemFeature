@@ -1,0 +1,10 @@
+:local(.filterBlock){
+    border-bottom: 1px solid black;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}

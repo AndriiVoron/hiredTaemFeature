@@ -2,9 +2,12 @@
     border: 1px solid grey;
     box-shadow: 2px 2px 3px 3px lightskyblue;
     border-radius:5px;
-    width: 250px; /* 90%;  */
+    width: 90%;
+    max-width: 300px;
     padding: 10px 15px;
     transition: all .4s ease;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 :local(.userCart:hover){
     background-color: lightskyblue;

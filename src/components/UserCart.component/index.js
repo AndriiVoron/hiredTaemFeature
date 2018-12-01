@@ -3,7 +3,6 @@ import { Component } from 'react';
 import styles from './style.css';
 
 class AppComponent extends Component {
-
   render() {
     const { user, toLeft, toRight } = this.props;
     return (

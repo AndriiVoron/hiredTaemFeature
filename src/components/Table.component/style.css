@@ -1,0 +1,13 @@
+:local(.table){
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+:local(.table > div){
+    border-right: 1px solid grey;
+}
+
+:local(.table > div:last-child){
+    border-right: 0px solid transparent;
+}

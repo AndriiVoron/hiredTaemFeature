@@ -2,6 +2,8 @@ import { Component } from 'react';
 import FilterSearchItem from '../FilterSearchItem.component';
 import FilterSelectItem from '../FilterSelect.component';
 
+import styles from './style.css';
+
 class AppComponent extends Component {
   constructor() {
     super();
@@ -27,7 +29,7 @@ class AppComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className={ styles.filterBlock }>
         <FilterSearchItem onChange={this.onChangeFilters('name')}></FilterSearchItem>
         <FilterSelectItem onChange={this.onChangeFilters('cities')} options={this.props.options.cities}></FilterSelectItem>
       </div>
