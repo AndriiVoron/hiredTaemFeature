@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "max-len": [1, 120, 2, {
+      "ignoreComments": true
+    }],
+    "linebreak-style": 0
+  },
+  "extends": ["airbnb-base"]
+}
